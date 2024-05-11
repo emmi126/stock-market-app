@@ -1,0 +1,22 @@
+<div class="jumbotron">
+  {{#if stock}}
+    <h1 class="display-4">{{ stock.companyName }} ({{ stock.symbol }})</h1>
+    <strong>Latest Price: </strong>${{ stock.latestPrice }}<br/>
+    <strong>Previous Close: </strong>${{ stock.previousClose }}<br/>
+    <strong>Percent Change: </strong>{{ stock.changePercent }}%<br/>
+    <strong>Market Cap: </strong>${{ stock.marketCap }}<br/>
+    <strong>Year-To-Date Return: </strong>{{ stock.ytdChange }}%<br/>
+    <strong>52 Week High: </strong>${{ stock.week52High }}<br/>
+    <strong>52 Week Low: </strong>${{ stock.week52Low }}<br/>
+  {{else}}
+    <h1 class="display-4">Welcome to the Stock Market App!</h1>
+    <p class="lead">Please use the search bar to look up stock quotes.</p>
+  {{/if}}
+</div>
+
+<!--
+<br/><br/>
+{{#each stock}}
+    {{@key}} | {{this}}<br/>
+{{/each}}
+-->
